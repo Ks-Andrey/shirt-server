@@ -47,7 +47,7 @@ class UserHandler {
             //  else if (data == 'ok') {
             //     await this.acceptOrder(chatId);
             // } else if (data == 'not_ok') {
-            //     this.bot.sendMessage(chatId, 'Пожалуйста, свяжитесь с нашим поддержкой @andrey_ksa.');
+            //     this.bot.sendMessage(chatId, 'Пожалуйста, свяжитесь с нашим поддержкой @mslb_125.');
             //     delete this.userData[chatId];
             // }
 
@@ -202,7 +202,7 @@ class UserHandler {
     async sendManager(chatId) {
         delete this.userData[chatId];
 
-        this.bot.sendMessage(chatId, 'По вопросам оптовых заказов, пожалуйста, свяжитесь с @andrey_ksa.');
+        this.bot.sendMessage(chatId, 'По вопросам оптовых заказов, пожалуйста, свяжитесь с @mslb_125.');
     }
 
     async createOrder(chatId) {

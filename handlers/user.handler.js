@@ -158,7 +158,9 @@ class UserHandler {
             delete this.userData[chatId];
 
             const userOrders = await this.orderRepository.getUserOrders(chatId);
-            if (userOrders.length === 0) {
+            const user = await this.userRepository.getUserById(chatId);
+
+            if (userOrders.length === 0 || user.length === 0) {
                 this.bot.sendMessage(chatId, 'У вас пока нет заказов.');
                 return;
             }

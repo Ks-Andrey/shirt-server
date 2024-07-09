@@ -408,24 +408,23 @@ INSERT INTO COLORS (id, color) VALUES
 (2, 'Белый');
 
 INSERT INTO SIZES (id, size) VALUES
-(1, '2XS'),
-(2, 'XS'),
-(3, 'S'),
-(4, 'M'),
-(5, 'L'),
-(6, 'XL'),
-(7, '2XL'),
-(8, '3XL');
+(1, 'XS'),
+(2, 'S'),
+(3, 'M'),
+(4, 'L'),
+(5, 'XL'),
+(6, '2XL'),
+(7, '3XL');
 
 INSERT INTO FONTS (id, font) VALUES
-(1, 'Arial'),
-(2, 'Times New Roman'),
-(3, 'Courier New'),
-(4, 'Verdana'),
-(5, 'Tahoma'),
-(6, 'Comic Sans MS'),
-(7, 'Calibri'),
-(8, 'Lucida Console');
+(1, 'Arial Narrow'),
+(2, 'Heattenschweiler'),
+(3, 'Bookman Old Style'),
+(4, 'Mistral'),
+(5, 'Comic Sans MS'),
+(6, 'Monotype Corsiva'),
+(7, 'Franklin Gothic Heavy'),
+(8, 'Book Antiqua');
 
 INSERT INTO PRINT_SIZES (id, size) VALUES
 (1, 'A3'),
@@ -450,7 +449,9 @@ GRANT SELECT ON TABLE FONTS TO shirt_user;
 GRANT SELECT ON TABLE PRINT_SIZES TO shirt_user;
 GRANT SELECT ON TABLE ORDER_STATUSES TO shirt_user;
 GRANT SELECT, INSERT, UPDATE ON TABLE USERS TO shirt_user;
+GRANT SELECT ON TABLE PRICE TO shirt_user;
 
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE PRICE TO shirt_admin;
 GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE ORDERS TO shirt_admin;
 GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE COLORS TO shirt_admin;
 GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE SIZES TO shirt_admin;
